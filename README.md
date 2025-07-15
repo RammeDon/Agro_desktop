@@ -1,10 +1,15 @@
 # Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
 
 In the project directory, you can run:
+
+### `npm run start:electron`
+This will run the desktop app version
+
+### `npm run dist`
+This will create the execuable app inside the dist directory
 
 ### `npm start`
 
