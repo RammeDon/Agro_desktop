@@ -1,0 +1,81 @@
+{
+  "name": "agro-web",
+  "version": "0.1.0",
+  "private": true,
+  "description": "AgroGauge desktop application",
+  "author": "Ramin Darudi <ramin.darudi00@gmail.com>",
+  "homepage": "./",
+  "main": "main.js",
+  "dependencies": {
+    "@testing-library/dom": "^10.4.0",
+    "@testing-library/jest-dom": "^6.6.3",
+    "@testing-library/react": "^16.3.0",
+    "@testing-library/user-event": "^13.5.0",
+    "leaflet": "^1.9.4",
+    "papaparse": "^5.5.3",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "react-leaflet": "^5.0.0",
+    "react-scripts": "5.0.1",
+    "web-vitals": "^2.1.4"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "start:electron": "npm run build && npx electron .",
+    "dist": "npx electron-builder"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "concurrently": "^9.2.0",
+    "electron": "37.2.1",
+    "electron-builder": "^24.13.3",
+    "wait-on": "^8.0.3"
+  },
+  "build": {
+    "extends": null,
+    "appId": "com.agro.web",
+    "productName": "AgroWeb",
+    "files": [
+      "build/**/*",
+      "main.js"
+    ],
+    "directories": {
+      "buildResources": "assets"
+    },
+    "win": {
+      "target": [
+        "nsis"
+      ],
+      "icon": "assets/icon.ico"
+    },
+    "nsis": {
+      "oneClick": false,
+      "perMachine": false,
+      "allowElevation": true,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "AgroGauge Web"
+    }
+  }
+}
